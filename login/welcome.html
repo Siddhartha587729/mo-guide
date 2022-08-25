@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wecome Page</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+    ></script>
+</head>
+<body>
+    <center><div style="margin:100px">
+        <span id="user" class="message">Hello, <email-id></span>
+        <div class="success"><span>Welcome to auth starter, You are successfully loged in!!!</span></div><br/>
+        <button id="logout" class="btn btn-danger">Logout</button>
+    </div></center>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBso6HyS60ohZFE-tXJQB2SyD4FJuGoNpg",
+          authDomain: "login-a912a.firebaseapp.com",
+          projectId: "login-a912a",
+          storageBucket: "login-a912a.appspot.com",
+          messagingSenderId: "550398747095",
+          appId: "1:550398747095:web:cb44f6f9fb9530c46aeb92",
+          measurementId: "G-EMF6ZZPDX0"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+      <script type="module" src="welc.js"></script>
+</body>
+</html>
