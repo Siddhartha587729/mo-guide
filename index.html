@@ -1,20 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="icon" href="images/tour-guide.png">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Mo Guide</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Mo Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <h1>This is a heading</h1>
-    <button><a href="login/index.html">click here</a></button>
-    <script src="js/mech.js"></script>
+  <section>
+    <header class="mt-2">
+      <nav class="h-16 p-4 flex items-center justify-between">
+        <div class="flex h-full">
+          <div class="">
+            <a href="/"><img src="images/tour-guide.png" alt="" height="70" width="70" class="-translate-y-5"></a>
+          </div>
+          <div class="">
+            <h1 class="text-2xl font-semibold font-sans text-[#333A73] cursor-pointer"><span class="text-[#FBA834]">Mo</span>Guide</h1>
+          </div>
+        </div>
+        <div class="">
+          <button class="bg-[#387ADF] text-white font-bold py-2 px-4 rounded-xl hover:bg-[#39B0E0] hover:scale-105 active:scale-100" onclick="window.location.href='/login';">
+            Login
+        </button>
+        </div>
+      </nav>
+    </header>
+  </section>
+  <section class="h-screen w-full flex overflow-hidden">
+    <div class="w-1/2 flex justify-center">
+      <div class="flex flex-col justify-center ">
+        <span class="text-6xl my-5 font-semibold">Plan Your Ultimate<br><span
+            class="text-7xl bg-gradient-to-r from-[#FBA834] to-[#50C4ED] text-transparent bg-clip-text">Odisha</span>
+          Adventure with<br> Our Planner</span>
+        <a class="flex justify-center items-center bg-blue-600 hover:bg-blue-500 p-2 rounded-md text-white w-[60%] text-lg"
+          href="planner/planner.html" role="button" style="text-decoration: none;">Begin Your Planning</a>
+      </div>
+    </div>
+    <div class="w-1/2 h-full shadow-[inset_0_0_40px_rgba(255,255,255,0.5)]" >
+      <section class="h-full grid grid-cols-3 gap-4 p-4 -translate-y-20">
+        <!-- Column 1 -->
+        <div class="h-full flex flex-col justify-center gap-4">
+          <div class="h-[280px] bg-gray-200 p-4 rounded-xl hover:scale-105 shadow-2xl" style="background-image: url(planner/Images/b.8.jpg); background-size: cover; background-position: center; "></div>
+          <div class="h-[280px] bg-gray-200 p-4 rounded-xl hover:scale-105 shadow-2xl" style="background-image: url(planner/Images/d.3.2.jpg); background-size: cover; background-position: center;"></div>
+        </div>
+        <!-- Column 2 -->
+        <div class="flex flex-col justify-center gap-4" >
+          <div class="h-[280px] bg-gray-200 p-4 rounded-xl hover:scale-105 shadow-2xl" style="background-image: url(planner/Images/1.jpg); background-size: cover; background-position: center;"></div>
+          <div class="h-[280px] bg-gray-200 p-4 rounded-xl hover:scale-105 shadow-2xl" style="background-image: url(planner/Images/d.1.jpg); background-size: cover; background-position: center;"></div>
+          <div class="h-[280px] bg-gray-200 p-4 rounded-xl hover:scale-105 shadow-2xl" style="background-image: url(planner/Images/b.2.jpg); background-size: cover; background-position: center;"></div>
+        </div>
+        <!-- Column 3 -->
+        <div class="flex flex-col justify-center gap-4">
+          <div class="h-[280px] bg-gray-200 p-4 rounded-xl hover:scale-105 shadow-2xl" style="background-image: url(planner/Images/2.jpg); background-size: cover; background-position: center;"></div>
+          <div class="h-[280px] bg-gray-200 p-4 rounded-xl hover:scale-105 shadow-2xl" style="background-image: url(planner/Images/b.1.jpg); background-size: cover; background-position: center;"></div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="max-h-[60vh]">
+    <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="planner/Images/1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="planner/Images/2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="planner/Images/a.3.1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+  </section>
+
+  <script src="js/mech.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

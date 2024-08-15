@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" href="images/tour-guide.png">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leaflet with Autocomplete API</title>
+    <link href="https://tiles.locationiq.com/v3/libs/leaflet/1.8.0/leaflet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://tiles.locationiq.com/v3/libs/leaflet/1.8.0/leaflet.js"></script>
+    <script type="text/javascript" src="https://tiles.locationiq.com/v3/js/liq-styles-ctrl-leaflet.js?v=0.1.8"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+        <!-- <img src='https://maps.locationiq.com/v3/staticmap?key=pk.5608a725b82bc33806c63de8b4095c61&center=20.248093,85.878751&zoom=11&maptype=streets&markers=icon:small-red-cutout|20.248093,85.878751&markers=icon:small-blue-cutout|20.248093,85.878751
+        '> -->
+    </div>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+
+    <link rel="stylesheet"
+        href="https://tiles.locationiq.com/v3/libs/leaflet-geocoder/1.9.6/leaflet-geocoder-locationiq.min.css">
+    <script
+        src="https://tiles.locationiq.com/v3/libs/leaflet-geocoder/1.9.6/leaflet-geocoder-locationiq.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-plugins/3.0.2/control/Permalink.js"></script>
+    <script type="text/javascript">
+        // Maps access token goes here
+        var key = 'pk.5608a725b82bc33806c63de8b4095c61';
+
+        // Add layers that we need to the map
+        var streets = L.tileLayer.Unwired({ key: key, scheme: "streets" });
+
+        // Initialize the map
+        var map = L.map('map', {
+            center: [20.248093, 85.878751], // Map loads with this location as center
+            zoom: 14,
+            scrollWheelZoom: true,
+            layers: [streets],
+            zoomControl: false
+        });
+
+        // Add the 'zoom' control
+        L.control.zoom({
+            position: 'topright'
+        }).addTo(map);
+
+        // Add the 'scale' control
+        L.control.scale().addTo(map);
+        L.control.locate({
+            position: "bottomright"
+        }).addTo(map);
+
+        var marker = L.marker([20.248093, 85.878751], { draggable: true })
+            .addTo(map)
+            .bindPopup("Current LatLng(20.248093, 85.878751)")
+            .openPopup();
+
+
+        marker.on('dragend', function (event) {
+            var position = marker.getLatLng();
+            marker.setLatLng(position, {
+                draggable: 'true'
+            }).bindPopup("You're now at " + position.toString())
+                .openPopup();
+
+        });
+
+        // Add the autocomplete text box
+        L.control.geocoder(key, {
+            // placeholder: 'Search nearby',
+            url: "https://api.locationiq.com/v1",
+            expanded: true,
+            panToPoint: true,
+            focus: true,
+            position: "topleft"
+        }).addTo(map);
+
+        map.addControl(new L.Control.Permalink({ useLocation: true, text: null }));
+    </script>
+</body>
+
+</html>
