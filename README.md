@@ -37,23 +37,23 @@ Nowadays, we are seeing people shifting more and more towards the online competi
 ## Screenshots
 
 ### 1. Landing Page
-![Landing Page](path/to/landing_page_image.png)
+![Landing Page](images/moguide_hero.png)
 
 ### 2. Planner Interface
-![Planner](path/to/planner_interface_image.png)
+![Planner](images/moguide_planner.png)
 
 ### 3. Integrated Map
-![Map](path/to/map_image.png)
+![Map](images/moguide_map.png)
 
 ## How to Run the Project
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/odisha-tourism-planner.git
+   git clone https://github.com/biswabismay/mo-guide.git
 
 2. Navigate to the project directory:
    ```bash
-   cd odisha-tourism-planner
+   cd mo-guide
 
 3. Open index.html in your web browser to view the project.
 
@@ -68,4 +68,3 @@ This project was developed during the Code4Odisha Hackathon, an initiative to pr
 - **Biswa Bismay** - [LinkedIn](https://www.linkedin.com/in/biswabismay/)
 - **Anisha Raj** - [LinkedIn](https://www.linkedin.com/in/anishaah/)
 - **Yuvraj Singh** - [LinkedIn](https://www.linkedin.com/in/yuvraj229/)
-```
